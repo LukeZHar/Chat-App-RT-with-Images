@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { useAuthStore } from "../store/useAuthStore.js"
+import { useAuthStore } from "../store/useAuthStore"
 import { Eye, EyeOff, Loader2, Lock, Mail, MessageSquare } from "lucide-react"
 import { Link } from "react-router-dom"
-
+import AuthImagePattern from "../components/AuthImagePattern"
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -95,8 +95,13 @@ const LoginPage = () => {
           </div>
         </div>
       </div>
+
+      <AuthImagePattern 
+        title={"Welcome back!"}
+        subtitle={"Sign in to continue to chat or catch up with your messages."}
+      />
     </div>
   )
 }
 
-export default LoginPage
+export default LoginPage;
